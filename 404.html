@@ -5,15 +5,18 @@
 <title>Top Marks Economics — page not found</title>
 <meta name="robots" content="noindex">
 <script>
-  /* Single-page app on GitHub Pages: send any stray path back to the homepage,
-     keeping a #/ fragment if one was supplied. */
+  /* Single-page app: send any stray path back to the site's homepage,
+     keeping a #/ fragment if one was supplied.
+     - On GitHub Pages project hosting, the site lives at /economics/
+     - On a custom domain (later), it lives at the root /              */
   var h = location.hash && location.hash.indexOf('#/')===0 ? location.hash : '';
-  location.replace('/' + h);
+  var base = /github\.io$/.test(location.hostname) ? '/economics/' : '/';
+  location.replace(base + h);
 </script>
 </head>
 <body>
 <p style="font-family:Georgia,serif;max-width:560px;margin:4rem auto;text-align:center">
-  Page not found — taking you back to <a href="/">Top Marks Economics</a>.
+  Page not found — taking you back to <a href="/economics/">Top Marks Economics</a>.
 </p>
 </body>
 </html>
