@@ -10,7 +10,11 @@
 <meta property="og:title" content="Top Marks Economics — Edexcel A Level (9EC0)">
 <meta property="og:description" content="Complete Edexcel A Level Economics revision: notes, diagrams, mnemonic essay plans, model answers, quant drills, data response and a 25-mark essay clinic.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="og-image.png">
+<meta property="og:url" content="https://topmarkseconomics.com/">
+<link rel="canonical" href="https://topmarkseconomics.com/">
+<meta property="og:image" content="https://topmarkseconomics.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -535,8 +539,8 @@
    SITE CONFIG — fill these in when you publish. Every feature below hides
    itself automatically if its setting is left empty, so nothing breaks.
    ----------------------------------------------------------------------------
-   siteUrl            : your live address, e.g. "https://topmarkseconomics.com"
-                        (used for canonical link, social-share tags, SEO data)
+   siteUrl            : your live address (for reference; the SEO and social-
+                        share tags in <head> are set directly and already done)
    contactEmail       : shown on the About page, e.g. "hello@example.com"
    newsletterEndpoint : a form endpoint URL from formspree.io (free tier is
                         fine) — create a form there and paste its URL, e.g.
@@ -548,18 +552,6 @@ const CONFIG = {
   contactEmail: "hello@topmarkseconomics.com",
   newsletterEndpoint: "https://formspree.io/f/xdavllqe"
 };
-
-/* Inject canonical/share URLs once a live address is configured. */
-(function(){
-  try{
-    if(CONFIG.siteUrl){
-      const u=CONFIG.siteUrl.replace(/\/$/,'')+'/';
-      const c=document.createElement('link'); c.rel='canonical'; c.href=u; document.head.appendChild(c);
-      const og=document.createElement('meta'); og.setAttribute('property','og:url'); og.content=u; document.head.appendChild(og);
-      const im=document.querySelector('meta[property="og:image"]'); if(im) im.content=u+'og-image.png';
-    }
-  }catch(e){}
-})();
 
 const SITE_DATA = {
 
@@ -6127,6 +6119,5 @@ render(currentHash);
     The live site updates within a minute.
 ================================================================================
 -->
-<script data-goatcounter="https://topmarkseconomics.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
